@@ -93,6 +93,7 @@ export default function Home() {
           
           <div className="border-b-[10px] border-black pb-4 mb-6 text-center">
             <h3 className="text-3xl font-black text-white uppercase tracking-wider mb-1">Informação Nutricional</h3>
+            <p className="text-zinc-400 font-medium">Porção de 100g</p>
           </div>
           
           <div className="space-y-4 text-lg">
