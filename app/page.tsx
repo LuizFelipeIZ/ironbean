@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function Home() {
   const equipe = [
-    "Halex Kardigam de Paula Wesker minato",
-    "João Gabriel Barbosa Lopes",
-    "João Victor de Santana Sanches",
-    "Leonardo Reis do Barco",
-    "Luiz Felipe Viana Dias da Silva",
-    "Maria Eduarda Puga Foganholi",
+    { nome: "Halex Kardigam de Paula", foto: "/halex.jpg" },
+    { nome: "João Gabriel Barbosa Lopes", foto: "/joao_b.jpg" },
+    { nome: "João Victor de Santana Sanches", foto: "/joao_v.jpg" },
+    { nome: "Leonardo Reis do Barco", foto: "/leo.jpg" },
+    { nome: "Luiz Felipe Viana Dias da Silva", foto: "/luiz.jpg" },
+    { nome: "Maria Eduarda Puga Foganholi", foto: "/duda.jpg" },
   ];
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-300 font-sans selection:bg-orange-500 selection:text-white">
       
-      {/* Hero Section - Foco em Impacto e Conversão */}
+      {/* Hero Section */}
       <header className="relative flex flex-col items-center justify-center py-32 px-6 text-center overflow-hidden border-b border-zinc-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-900/20 via-zinc-950 to-zinc-950 -z-10"></div>
         
@@ -45,7 +45,6 @@ export default function Home() {
         <p className="text-zinc-400 max-w-2xl mx-auto mb-16 text-lg">Projetada com exatidão para quem leva o treino a sério e não falha nos macros.</p>
         
         <div className="grid md:grid-cols-3 gap-6">
-          {/* Card 1 */}
           <div className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500/50 transition-colors group text-left relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl group-hover:bg-orange-500/10 transition-all"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Macros Impecáveis</h3>
@@ -54,7 +53,6 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Card 2 */}
           <div className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500/50 transition-colors group text-left relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl group-hover:bg-orange-500/10 transition-all"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Força Sustentável</h3>
@@ -63,7 +61,6 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Card 3 */}
           <div className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 hover:border-orange-500/50 transition-colors group text-left relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl group-hover:bg-orange-500/10 transition-all"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Clean Label</h3>
@@ -94,13 +91,13 @@ export default function Home() {
             <div key={index} className="flex flex-col items-center group">
               <div className="w-32 h-32 bg-zinc-800 rounded-full mb-6 overflow-hidden relative shadow-lg border-2 border-zinc-800 group-hover:border-orange-500 transition-all duration-300 group-hover:scale-105">
                 <Image 
-                  src="/placeholder-avatar.jpg" 
-                  alt={`Foto de ${membro}`} 
+                  src={membro.foto} 
+                  alt={`Foto de ${membro.nome}`} 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
                 />
               </div>
-              <h3 className="font-bold text-zinc-200 group-hover:text-white transition-colors">{membro}</h3>
+              <h3 className="font-bold text-zinc-200 group-hover:text-white transition-colors text-center">{membro.nome}</h3>
               <p className="text-xs text-orange-500/80 mt-1 uppercase tracking-wider font-semibold">Pesquisador</p>
             </div>
           ))}
