@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   const equipe = [
-    { nome: "Halex Kardigam de Paula", foto: "/halex.jpg" },
-    { nome: "João Gabriel Barbosa Lopes", foto: "/joao_b.jpg" },
-    { nome: "João Victor de Santana Sanches", foto: "/joao_v.jpg" },
-    { nome: "Leonardo Reis do Barco", foto: "/leo.jpg" },
-    { nome: "Luiz Felipe Viana Dias da Silva", foto: "/luiz.jpg" },
-    { nome: "Maria Eduarda Puga Foganholi", foto: "/duda.jpg" },
+    { nome: "Halex Kardigam de Paula", foto: "/halex.jpg", cargo: "Gerente de Vendas" },
+    { nome: "João Gabriel Barbosa Lopes", foto: "/joao_b.jpg", cargo: "Pesquisador" },
+    { nome: "João Victor de Santana Sanches", foto: "/joao_v.jpg", cargo: "Pesquisador" },
+    { nome: "Leonardo Reis do Barco", foto: "/leo.jpg", cargo: "Pesquisador" },
+    { nome: "Luiz Felipe Viana Dias da Silva", foto: "/luiz.jpg", cargo: "Pesquisador" },
+    { nome: "Maria Eduarda Puga Foganholi", foto: "/duda.jpg", cargo: "Pesquisadora" },
   ];
 
   // Configuração do link do WhatsApp
@@ -93,7 +93,6 @@ export default function Home() {
           
           <div className="border-b-[10px] border-black pb-4 mb-6 text-center">
             <h3 className="text-3xl font-black text-white uppercase tracking-wider mb-1">Informação Nutricional</h3>
-            <p className="text-zinc-400 font-medium">Porção de 100g (1 unidade)</p>
           </div>
           
           <div className="space-y-4 text-lg">
@@ -174,7 +173,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="font-bold text-zinc-200 group-hover:text-white transition-colors text-center">{membro.nome}</h3>
-              <p className="text-xs text-orange-500/80 mt-1 uppercase tracking-wider font-semibold">Pesquisador</p>
+              <p className="text-xs text-orange-500/80 mt-1 uppercase tracking-wider font-semibold">{membro.cargo}</p>
             </div>
           ))}
         </div>
